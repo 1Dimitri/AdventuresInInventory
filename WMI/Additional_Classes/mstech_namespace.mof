@@ -1,0 +1,13 @@
+#pragma AUTORECOVER
+#pragma namespace("\\\\.\\root")
+
+instance of __Namespace
+{
+    Name = "MsTech";
+};
+
+#pragma namespace("\\\\.\\root\\MsTech")
+instance of __Namespace
+{
+    Name = "Inventory";
+};
