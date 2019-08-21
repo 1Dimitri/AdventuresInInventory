@@ -1,5 +1,9 @@
 #pragma AUTORECOVER
 #pragma namespace("\\\\.\\root\\MsTech\\Inventory")
+
+#pragma deleteclass("MsiSoftware", nofail)
+#pragma deleteclass("MsiSoftware32", nofail)
+
 instance of __Win32Provider as $Instprov
 {
 Name ="RegProv" ;
@@ -33,6 +37,11 @@ string UninstallString;
 string EstimatedSizeKb;
 [PropertyContext("InstallDate")]
 string InstallDate;
+[PropertyContext("VersionMajor")]
+uint32 VersionMajor;
+[PropertyContext("VersionMinor")]
+uint32 VersionMinor;
+
 };
  
 [dynamic, provider("RegProv"),
@@ -54,4 +63,8 @@ string UninstallString;
 string EstimatedSizeKb;
 [PropertyContext("InstallDate")]
 string InstallDate;
+[PropertyContext("VersionMajor")]
+uint32 VersionMajor;
+[PropertyContext("VersionMinor")]
+uint32 VersionMinor;
 };
